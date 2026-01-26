@@ -74,7 +74,7 @@ border-radius: 10px 0 0 10px;
 
 /* Middle segments */
 #memory {
-background: linear-gradient(135deg, #b8c0ff, #cdb4ff);
+background: linear-gradient(135deg, #cdb4ff, #cdb4ff);
 border-radius: 0;
 }
 #disk {
