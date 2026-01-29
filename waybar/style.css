@@ -69,23 +69,23 @@ color: #0f0f14;
 }
 
 #cpu {
-background: linear-gradient(135deg, #b8c0ff, #cdb4ff);
+background: linear-gradient(135deg, #b8c0ff, #ddb7f3);
 border-radius: 10px 0 0 10px;
 }
 
 /* Middle segments */
 #memory {
-background: linear-gradient(135deg, #cdb4ff, #cdb4ff);
+background: linear-gradient(135deg, #ddb7f3, #f7afdb);
 border-radius: 0;
 }
 #disk {
-background: linear-gradient(135deg, #cdb4ff, #ffc8dd);
+background: linear-gradient(135deg, #f7afdb, #ffaebe);
 border-radius: 0;
 }
 
 /* Right rounded edge */
 #temperature {
-background: linear-gradient(135deg, #ffc8dd, #ffb4a2);
+background: linear-gradient(135deg, #ffaebe, #ffb4a2);
 border-radius: 0 10px 10px 0;
 }
 
