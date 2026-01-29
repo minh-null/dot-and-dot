@@ -25,6 +25,7 @@ window#waybar.hidden {
 #pulseaudio,
 #pulseaudio-slider,
 #network,
+#custom-power,
 #language {
   color: #161320;
   margin-top: 6px;
@@ -166,13 +167,24 @@ box-shadow: 0 0 10px rgba(180,160,255,0.45);
 #pulseaudio-slider slider {}
 
 #network {
-  background: linear-gradient(135deg, #bd93f9, #7aa2f7);;
+  background: linear-gradient(135deg, #bd93f9, #7aa2f7);
   padding-right: 13px;
 }
 
 #language {
-  background: #C8B6FF;
+  background: linear-gradient(135deg, #7aa2f7, #C8B6FF);
   padding-right: 15px;
+}
+
+#custom-power {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #89B4FA;
+  background: #161320;
+  margin-right: 5px;
 }
 
 /* === Optional animation === */
