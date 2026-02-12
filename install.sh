@@ -3,7 +3,7 @@
 username=$(whoami)
 wd=$(pwd)
 
-sudo pacman -S fastftech hyprland cava waybar wofi fastfetch hyprpaper rofi-emoji
+sudo pacman -S fastftech hyprland cava waybar wofi fastfetch hyprpaper rofi-emoji papirus-icon-theme pcmanfm
 
 rm -rf /home/"$username"/.config/cava/
 rm -rf /home/"$username"/.config/hypr/
