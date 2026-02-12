@@ -24,14 +24,14 @@
     "pulseaudio/slider",
     "pulseaudio",
     "network",
-    "hyprland/language",
     "custom/power"
   ],
   /* === Modules Left === */
   "custom/archicon": {
     "format": "",
     "on-click": "wofi --show drun",
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "Arch BTW",
   },
   "clock": {
     "timezone": "Vietnam/Hanoi_City",
@@ -122,15 +122,10 @@
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
   },
-  "hyprland/language": {
-    "format": "{} ",
-    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
-    "format-vi": "VIE",
-    "format-en": "ENG"
-  },
   "custom/power": {
     "format": "⏻",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Choose Power Options",
     "on-click": "wofi-power"
   },
 }

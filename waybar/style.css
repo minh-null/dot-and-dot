@@ -25,8 +25,7 @@ window#waybar.hidden {
 #pulseaudio,
 #pulseaudio-slider,
 #network,
-#custom-power,
-#language {
+#custom-power {
   color: #161320;
   margin-top: 6px;
   margin-bottom: 6px;
@@ -69,23 +68,23 @@ color: #0f0f14;
 }
 
 #cpu {
-background: linear-gradient(135deg, #b8c0ff, #ddb7f3);
+background: linear-gradient(135deg, #bd93f9, #ac97f9);
 border-radius: 10px 0 0 10px;
 }
 
 /* Middle segments */
 #memory {
-background: linear-gradient(135deg, #ddb7f3, #f7afdb);
+background: linear-gradient(135deg, #ac97f9, #9c9bf8);
 border-radius: 0;
 }
 #disk {
-background: linear-gradient(135deg, #f7afdb, #ffaebe);
+background: linear-gradient(135deg, #9c9bf8, #8b9ef8);
 border-radius: 0;
 }
 
 /* Right rounded edge */
 #temperature {
-background: linear-gradient(135deg, #ffaebe, #ffb4a2);
+background: linear-gradient(135deg, #8b9ef8, #7aa2f7);
 border-radius: 0 10px 10px 0;
 }
 
@@ -148,32 +147,29 @@ box-shadow: 0 0 10px rgba(180,160,255,0.45);
 }
 
 #idle_inhibitor {
-  background: linear-gradient(135deg, #bd93f9, #7aa2f7);
+  background: linear-gradient(135deg, #bd93f9, #ac97f9);
   padding-right: 15px;
 }
 
 #pulseaudio {
   min-width: 55px;
   color: #0f0f14;
-  background: linear-gradient(135deg, #bd93f9, #7aa2f7);
+  background: linear-gradient(135deg, #ac97f9, #9c9bf8);
 }
 
 #pulseaudio-slider {
   color: #b8c0ff;
-  background: linear-gradient(135deg, #bd93f9, #7aa2f7);
+  background: linear-gradient(135deg, #9c9bf8, #8b9ef8);
   min-width: 50px;
 }
 
 #pulseaudio-slider slider {}
 
 #network {
-  background: linear-gradient(135deg, #bd93f9, #7aa2f7);
+  background: linear-gradient(135deg, #8b9ef8, #7aa2f7);
   padding-right: 13px;
-}
-
-#language {
-  background: linear-gradient(135deg, #7aa2f7, #C8B6FF);
-  padding-right: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #custom-power {
