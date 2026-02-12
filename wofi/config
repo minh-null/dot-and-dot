@@ -10,4 +10,4 @@ term=kitty
 prompt=Search…
 filter-rate=100
 show=drun
-images_size=48
+images-size=48
