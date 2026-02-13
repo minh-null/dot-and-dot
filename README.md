@@ -114,6 +114,9 @@ dot-and-dot/
 ├── README.md
 └── install.sh
 ```
+
+## Link to the animated thing
+### [![Typing SVG](https://readme-typing-svg.demolab.com/demo/)
 ## Have Fun ricing :3
 
 
