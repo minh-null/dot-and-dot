@@ -1,0 +1,13 @@
+show-icons=true
+icon-size=48
+allow-images=true
+width=500
+height=360
+location=center
+layer=overlay
+gtk-dark=true
+term=kitty
+prompt=Search…
+filter-rate=100
+show=drun
+images-size=48

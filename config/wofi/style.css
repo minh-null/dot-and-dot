@@ -1,0 +1,48 @@
+* {
+font-family: "JetBrains Mono", "Noto Color Emoji";
+font-size: 14px;
+}
+
+/* Window */
+window {
+    background-color: rgba(20, 20, 20, 0.85);
+    border-radius: 16px;
+    border: 2px solid rgba(120, 120, 120, 0.15);
+}
+
+/* Input bar */
+#input {
+margin: 16px;
+padding: 12px;
+border-radius: 12px;
+border: none;
+background-color: rgba(35, 35, 35, 0.9);
+color: #ffffff;
+}
+
+/* Inner box */
+#inner-box {
+margin: 8px;
+}
+
+/* Scroll */
+#scroll {
+margin: 8px;
+}
+
+/* Entry */
+#entry {
+padding: 10px;
+border-radius: 12px;
+}
+
+/* Selected entry */
+#entry:selected {
+background: linear-gradient(135deg, #7aa2f7, #bb9af7);
+color: black;
+}
+
+/* Icons */
+#img {
+margin-right: 12px;
+}

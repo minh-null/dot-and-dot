@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+emoji=$(grep -E '^[0-9A-F ]+;' /usr/share/unicode/emoji-test.txt \
+  | sed 's/.*; fully-qualified *//' \
+  | cut -d ' ' -f1 \
+  | wofi --dmenu --prompt "Emoji")
+
+[ -n "$emoji" ] && printf "%s" "$emoji" | wl-copy
