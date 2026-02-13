@@ -1,4 +1,0 @@
-if [[ "${input,,}" == "power" ]]; then
-    ~/.local/bin/wofi-power
-    exit
-fi
