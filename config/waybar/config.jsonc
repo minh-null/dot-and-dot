@@ -29,7 +29,7 @@
   /* === Modules Left === */
   "custom/archicon": {
     "format": "",
-    "on-click": "wofi --show drun --allow-images --show-icons --prompt "Search something . . ."",
+    "on-click": "wofi --show drun --allow-images --show-icons --prompt \"Search something . . .\"",
     "tooltip": true,
     "tooltip-format": "Arch BTW",
   },
@@ -96,15 +96,11 @@
       "activated": "",
       "deactivated": ""
     }
-    "tooltip": true,
-    "tooltip-format": "Idle Inhibitor"
   },
   "pulseaudio/slider": {
     "format": "{volume}%",
     "format-muted": " MUTE",
     "step": 5,
-    "tooltip": true
-    "tooltip-format": "Volume slider"
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
