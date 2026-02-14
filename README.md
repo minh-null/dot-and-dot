@@ -37,6 +37,7 @@
     <summary>File Managers</summary>
 
   - [Dolphin](https://github.com/KDE/dolphin)
+  - [ez-fm](https://github.com/TechyTechster/ez-fm.git)
 
   </details>
 
