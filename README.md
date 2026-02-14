@@ -36,7 +36,6 @@
   <details>
     <summary>File Managers</summary>
 
-  - [PCManFM](https://github.com/lxde/pcmanfm)
   - [Dolphin](https://github.com/KDE/dolphin)
 
   </details>
