@@ -34,7 +34,7 @@
     "tooltip-format": "Arch BTW",
   },
   "clock": {
-    "timezone": "Vietnam/Hanoi_City",
+    "timezone": "Coutry/City",
     "format": "{:%H:%M %d, %m}",
     "tooltip-format": "{calendar}",
     "calendar": {
