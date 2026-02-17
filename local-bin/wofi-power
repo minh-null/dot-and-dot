@@ -1,18 +1,10 @@
 #!/usr/bin/env bash
 
-choice=$(printf "Shutdown\nReboot\nLock\nLogout" | wofi --dmenu --prompt "Power")
+choice=$(printf "⏻ Shutdown\n↻ Reboot\n🗝 Lock\n⎋ Logout" | wofi --dmenu --prompt "Power")
 
 case "$choice" in
-  Shutdown)
-    systemctl poweroff
-    ;;
-  Reboot)
-    systemctl reboot
-    ;;
-  "Lock")
-    hyprlock
-    ;;
-  "Logout")
-    hyprctl dispatch exit
-    ;;
+  *Shutdown) systemctl poweroff ;;
+  *Reboot)   systemctl reboot ;;
+  *Lock)     hyprlock ;;
+  *Logout)   hyprctl dispatch exit ;;
 esac

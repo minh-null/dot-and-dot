@@ -1,4 +1,38 @@
-if [[ "${input,,}" == "power" ]]; then
-    ~/.local/bin/wofi-power
-    exit
-fi
+#!/usr/bin/env bash
+
+applications() {
+  wofi --show drun --allow-images --show-icons --prompt "Search something . . ."
+}
+
+emoji() {
+  rofimoji --selector wofi --clipboard wl-copy --action copy
+}
+
+help_menu() {
+  wofi-keybinds
+}
+
+power_menu() {
+  wofi-power
+}
+
+# Ordered entries: "Label|function"
+menu_entries=(
+  "📦 Applications|applications"
+  "😀 Emoji|emoji"
+  "⚙️ Help|help_menu"
+  "⏻ Power|power_menu"
+)
+
+# Extract labels for display
+labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
+
+choice=$(printf "%s\n" "$labels" | \
+  wofi --dmenu --prompt "Menu, search something . . .")
+
+# Execute matching function
+for entry in "${menu_entries[@]}"; do
+  label="${entry%%|*}"
+  action="${entry##*|}"
+  [[ "$choice" == "$label" ]] && "$action"
+done

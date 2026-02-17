@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+menu_entries=(
+  "SUPER + Q          │           Open Terminal"
+  "SUPER + C          │           Close Window"
+  "SUPER + M          │           Exit Hyprland"
+  "SUPER + E          │           Open Dolphin"
+  "SUPER + SHIFT + E  │           Open EZ-FM"
+  "SUPER + ALT + F    │           Toggle Floating"
+  "SUPER + R          │           Open App Menu"
+  "SUPER + P          │           Toggle Pseudo (Dwindle)"
+  "SUPER + J          │           Toggle Split (Dwindle)"
+  "SUPER + V          │           Clipboard History"
+  "PRINT              │           Screenshot Selection"
+  "SUPER + F          │           Toggle Fullscreen"
+  "SUPER + B          │           Open Browser (Firefox)"
+  "SUPER + T          │           Open Text Editor (Kate)"
+  "SUPER + SHIFT + .  │           Emoji Picker - GUI"
+  "SUPER + .          │           Emoji Picker - Wofi"
+  "SUPER + SPACE      │           Launcher"
+  "SUPER + ESC        │           Power Menu"
+  "SUPER + L          │           Lock Screen"
+  "SUPER + ←          │           Move Focus Left"
+  "SUPER + →          │           Move Focus Right"
+  "SUPER + ↑          │           Move Focus Up"
+  "SUPER + ↓          │           Move Focus Down"
+  "SUPER + 1          │           Switch to Workspace 1"
+  "SUPER + 2          │           Switch to Workspace 2"
+  "SUPER + N          │           Switch to Workspace N"
+  "SUPER + 0          │           Switch to Workspace 10"
+  "SUPER + SHIFT + 1  │           Move Window to Workspace 1"
+  "SUPER + SHIFT + 2  │           Move Window to Workspace 2"
+  "SUPER + SHIFT + N  │           Move Window to Workspace N"
+  "SUPER + SHIFT + 0  │           Move Window to Workspace 10"
+  "SUPER + S          │           Toggle Special Workspace (Magic)"
+  "SUPER + SHIFT + S  │           Move Window to Special Workspace"
+  "SUPER + Scroll ↓   │           Next Workspace"
+  "SUPER + Scroll ↑   │           Previous Workspace"
+  "SUPER + LMB Drag   │           Move Window"
+  "SUPER + RMB Drag   │           Resize Window"
+  "Volume Up Key      │           Increase Volume"
+  "Volume Down Key    │           Decrease Volume"
+  "Mute Key           │           Toggle Output Mute"
+  "Mic Mute Key       │           Toggle Mic Mute"
+  "Brightness Up Key  │           Increase Brightness"
+  "Brightness Down Key│           Decrease Brightness"
+  "Media Next         │           Next Track"
+  "Media Play/Pause   │           Play / Pause"
+  "Media Previous     │           Previous Track"
+)
+
+# Extract labels for display
+labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
+
+choice=$(printf "%s\n" "${menu_entries[@]}" | \
+  wofi --dmenu \
+       --class wofi-keybinds \
+       --width 520 \
+       --height 480 \
+       --prompt "Need some help? Here are some keybinds")
+
+
