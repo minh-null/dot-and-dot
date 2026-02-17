@@ -119,4 +119,4 @@ dot-and-dot/
 ### ![Typing SVG](https://readme-typing-svg.demolab.com/demo/)
 ## Have Fun ricing :3
 
-MARCHYSO / **M**inh_null's **A**r**C**h Rice using **H**yprland, **Y**ummy **S**illy and un**O**ptimised :3
+MARCHYSO / **M**inh_null's **A**r**C**h Rice for **H**yprland, but **Y**ummy, **S**illy and un**O**ptimised :3
