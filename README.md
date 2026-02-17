@@ -119,4 +119,4 @@ dot-and-dot/
 ### ![Typing SVG](https://readme-typing-svg.demolab.com/demo/)
 ## Have Fun ricing :3
 
--MARCHYSO-
+MARCHYSO
