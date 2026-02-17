@@ -18,3 +18,9 @@ cp "$wd"/wallpapers/* /home/"$username"/Pictures/Wallpapers
 cp "$wd"/config* /home/"$username"/.config
 cp "$wd"/local-bin /home/"$username"/.local/bin
 cp "$wd"/.zshrc /home/"$username"
+
+git clone https://github.com/TechyTechster/ez-fm.git
+cd ez-fm
+
+./install.sh
+ez-fm
