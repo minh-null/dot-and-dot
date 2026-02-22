@@ -60,7 +60,8 @@
 
 ## Image/Media
 
-![](/assets/rice.png)
+![](/assets/rice.jpg)
+![](/assets/rice2.jpg)
 ![](/assets/rice.gif)
 
 ## File structure
