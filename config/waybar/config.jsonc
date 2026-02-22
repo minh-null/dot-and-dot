@@ -24,7 +24,8 @@
     "pulseaudio/slider",
     "pulseaudio",
     "network",
-    "custom/power"
+    "custom/orbit",
+    "custom/notification",
   ],
   /* === Modules Left === */
   "custom/archicon": {
@@ -34,7 +35,7 @@
     "tooltip-format": "Arch BTW",
   },
   "clock": {
-    "timezone": "Coutry/City",
+    "timezone": "Vietnam/Hanoi_City",
     "format": "{:%H:%M %d, %m}",
     "tooltip-format": "{calendar}",
     "calendar": {
@@ -121,10 +122,32 @@
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
   },
-  "custom/power": {
-    "format": "⏻",
+  "custom/orbit": {
+    "exec": "orbit waybar-status",
+    "return-type": "json",
+    "interval": 10,
+    "on-click": "orbit toggle top-right",
+    "format": " "
+  },
+  "custom/notification": {
     "tooltip": true,
-    "tooltip-format": "Choose Power Options",
-    "on-click": "wofi-power"
+    "format": "<span size='20pt'>{icon}</span>",
+    "format": "{icon} {0}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   },
 }

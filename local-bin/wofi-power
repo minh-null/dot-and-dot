@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-choice=$(printf "⏻ Shutdown\n↻ Reboot\n🗝 Lock\n⎋ Logout" | wofi --dmenu --prompt "Power")
+choice=$(printf "⏻ Shutdown\n↻ Reboot\n🗝 Lock\n⎋ Logout" | \
+wofi --dmenu \
+     --prompt "Power Options" \
+     --location top_left \
+     --width 300 \
+     --height 275)
 
 case "$choice" in
   *Shutdown) systemctl poweroff ;;

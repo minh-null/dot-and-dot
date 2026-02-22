@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "os": "#161320",
+    "pink": "#ef93f9",
+    "lavender": "#bd93f9",
+    "blue": "#89B4FA",
+    "wight": "#FFFFFF",
+    "black": "#161320",
+    "text": "#494D64"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "type": "prompt",
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#ED8796",
+          "leading_diamond": "\ue0b6",
+          "powerline_symbol": "\ue0b4",
+          "properties": {
+            "always_enabled": false,
+            "status_template": "✘"
+          }
+        },
+        {
+          "type": "os",
+          "style": "diamond",
+          "background": "p:black",
+          "foreground": "p:blue",
+          "leading_diamond": "\ue0b6",
+          "powerline_symbol": "\ue0b4",
+          "template": "{{ .Icon }} "
+        },
+        {
+          "type": "session",
+          "style": "diamond",
+          "background": "p:blue",
+          "foreground": "p:text",
+          "powerline_symbol": "\ue0b4",
+          "template": " {{ .UserName }}@{{ .HostName }}"
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "background": "p:lavender",
+          "foreground": "p:black",
+          "powerline_symbol": "\ue0b4",
+          "template": " ({{ .Venv }}) ",
+          "properties": {
+            "display_mode": "environment",
+            "fetch_virtual_env": true
+          }
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "background": "p:pink",
+          "foreground": "p:text",
+          "powerline_symbol": "\ue0b4",
+          "template": " {{ .Path }}",
+          "properties": {
+            "folder_icon": "\ue5fe ",
+            "home_icon": "~",
+            "style": "agnoster_short"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "background": "p:lavender",
+          "foreground": "p:text",
+          "powerline_symbol": "\ue0b4",
+          "template": " {{ .HEAD }}",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": false,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          }
+        }
+      ]
+    }
+  ],
+  "final_space": true,
+  "version": 4
+}

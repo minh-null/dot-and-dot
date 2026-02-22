@@ -1,6 +1,9 @@
+mode=drun
+allow-images=true
 show-icons=true
 icon-size=48
-allow-images=true
+no-actions=true
+
 width=500
 height=360
 location=center
@@ -9,5 +12,3 @@ gtk-dark=true
 term=kitty
 prompt=Search…
 filter-rate=100
-show=drun
-images-size=48

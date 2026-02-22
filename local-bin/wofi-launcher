@@ -12,23 +12,23 @@ help_menu() {
   wofi-keybinds
 }
 
-power_menu() {
-  wofi-power
-}
-
 # Ordered entries: "Label|function"
 menu_entries=(
   "📦 Applications|applications"
   "😀 Emoji|emoji"
   "⚙️ Help|help_menu"
-  "⏻ Power|power_menu"
+  "⏻ Power|wofi-power"
 )
 
 # Extract labels for display
 labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
 
 choice=$(printf "%s\n" "$labels" | \
-  wofi --dmenu --prompt "Menu, search something . . .")
+  wofi --dmenu \
+     --prompt "Menu, search something" \
+     --location top_left \
+     --width 300 \
+     --height 275)
 
 # Execute matching function
 for entry in "${menu_entries[@]}"; do

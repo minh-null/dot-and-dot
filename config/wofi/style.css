@@ -38,7 +38,7 @@ border-radius: 12px;
 
 /* Selected entry */
 #entry:selected {
-background: linear-gradient(135deg, #7aa2f7, #bb9af7);
+background-image: linear-gradient(to right, #7aa2f7, #bb9af7);
 color: black;
 }
 
@@ -47,7 +47,7 @@ color: black;
 margin-right: 12px;
 }
 
-/* Center text only for wofi-keybinds */
+/* Center text only for wofi-keybinds
 window.wofi-keybinds #entry {
     justify-content: center;
 }
@@ -59,4 +59,4 @@ window.wofi-keybinds #entry box {
 window.wofi-keybinds #text {
     text-align: center;
 }
-
+*/

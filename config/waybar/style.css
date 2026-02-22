@@ -25,7 +25,8 @@ window#waybar.hidden {
 #pulseaudio,
 #pulseaudio-slider,
 #network,
-#custom-power {
+#custom-orbit,
+#custom-notification {
   color: #161320;
   margin-top: 6px;
   margin-bottom: 6px;
@@ -45,8 +46,7 @@ window#waybar.hidden {
 
 /* Separation to the rigth */
 #clock,
-#temperature,
-#language {
+#temperature {
   margin-right: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -68,27 +68,27 @@ color: #0f0f14;
 }
 
 #cpu {
-background: linear-gradient(135deg, #bd93f9, #ac97f9);
+background: linear-gradient(135deg, #bd93f9, #B196F9);
 border-radius: 10px 0 0 10px;
 }
 
 /* Middle segments */
 #memory {
-background: linear-gradient(135deg, #ac97f9, #9c9bf8);
+background: linear-gradient(135deg, #B196F9, #9D9BF8);
 border-radius: 0;
 }
 #disk {
-background: linear-gradient(135deg, #9c9bf8, #8b9ef8);
+background: linear-gradient(135deg, #9D9BF8, #85A0F7);
 border-radius: 0;
 }
 
 /* Right rounded edge */
 #temperature {
-background: linear-gradient(135deg, #8b9ef8, #7aa2f7);
+background: linear-gradient(135deg, #85A0F7, #7AA2F7);
 border-radius: 0 10px 10px 0;
 }
 
-#cpu, #memory, #clock, #disk {
+#cpu, #memory, #clock, #disk, #temperature {
 box-shadow: 0 0 10px rgba(180,160,255,0.45);
 }
 
@@ -147,40 +147,50 @@ box-shadow: 0 0 10px rgba(180,160,255,0.45);
 }
 
 #idle_inhibitor {
-  background: linear-gradient(135deg, #bd93f9, #ac97f9);
+  background: linear-gradient(135deg, #bd93f9, #B395F9);
   padding-right: 15px;
 }
 
 #pulseaudio {
   min-width: 55px;
   color: #0f0f14;
-  background: linear-gradient(135deg, #ac97f9, #9c9bf8);
+  background: linear-gradient(135deg, #B395F9, #A399F9);
 }
 
 #pulseaudio-slider {
   color: #b8c0ff;
-  background: linear-gradient(135deg, #9c9bf8, #8b9ef8);
+  background: linear-gradient(135deg, #A399F9, #999BF8);
   min-width: 50px;
 }
 
 #pulseaudio-slider slider {}
 
 #network {
-  background: linear-gradient(135deg, #8b9ef8, #7aa2f7);
+  background: linear-gradient(135deg, #999BF8, #919DF8);
   padding-right: 13px;
+}
+
+#custom-orbit {
+  background: linear-gradient(135deg, #919DF8, #7aa2f7);
+  font-size: 15px;
+  color: #0f0f14;
+  margin-right: 5px;
+  /*padding: 6px 12px;*/
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-#custom-power {
-  border-radius: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
   font-size: 20px;
-  font-weight: bold;
   color: #89B4FA;
   background: #161320;
   margin-right: 5px;
+  border-radius: 10px;
+}
+
+#idle_inhibitor, #pulseaudio, #pulseaudio-slider, #network, #custom-orbit {
+box-shadow: 0 0 10px rgba(180,160,255,0.45);
 }
 
 /* === Optional animation === */

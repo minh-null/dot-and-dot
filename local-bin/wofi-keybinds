@@ -5,7 +5,7 @@ menu_entries=(
   "SUPER + C          │           Close Window"
   "SUPER + M          │           Exit Hyprland"
   "SUPER + E          │           Open Dolphin"
-  "SUPER + SHIFT + E  │           Open EZ-FM"
+  "ALT + E            │           Open EZ-FM"
   "SUPER + ALT + F    │           Toggle Floating"
   "SUPER + R          │           App Launcher"
   "SUPER + P          │           Toggle Pseudo (Dwindle)"
@@ -32,8 +32,9 @@ menu_entries=(
   "SUPER + SHIFT + 2  │           Move Window to Workspace 2"
   "SUPER + SHIFT + N  │           Move Window to Workspace N"
   "SUPER + SHIFT + 0  │           Move Window to Workspace 10"
-  "SUPER + S          │           Toggle Special Workspace (Magic)"
+  "SUPER + S          │           Toggle Special Workspace"
   "SUPER + SHIFT + S  │           Move Window to Special Workspace"
+  "ALT + C            │           VS Codium"
   "SUPER + Scroll ↓   │           Next Workspace"
   "SUPER + Scroll ↑   │           Previous Workspace"
   "SUPER + LMB Drag   │           Move Window"
@@ -55,8 +56,8 @@ labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
 choice=$(printf "%s\n" "${menu_entries[@]}" | \
   wofi --dmenu \
        --class wofi-keybinds \
-       --width 520 \
+       --width 600 \
        --height 480 \
-       --prompt "Need some help? Here are some keybinds")
+       --prompt "Need some help? Here are some keybinds, SUPER is the Windows key")
 
 
