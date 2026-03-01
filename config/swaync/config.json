@@ -33,10 +33,25 @@
   "script-fail-notify": true,
 
   "widgets": [
+    "volume",
+    "custom-brightness",
+    "mpris",
+    "title",
     "inhibitors",
     "dnd",
-    "mpris",
     "notifications"
+  ],
+
+  "custom-widgets": [
+    {
+      "name": "custom-brightness",
+      "type": "slider",
+      "label": "󰃠",
+      "min": 0,
+      "max": 100,
+      "exec": "~/.config/swaync/scripts/brightness.sh get",
+      "on-change": "~/.config/swaync/scripts/brightness.sh set {value}"
+    }
   ],
   "widget-config": {
     "notifications": {
@@ -49,7 +64,7 @@
     },
     "title": {
       "text": "Notifications",
-      "clear-all-button": false,
+      "clear-all-button": true,
       "button-text": "Clear All"
     },
     "dnd": {
@@ -61,6 +76,17 @@
     },
     "mpris": {
       "autohide": true
+    },
+    "volume": {
+      "label": "󰕾",
+      "show-per-app": true,
+      "show-mute": true,
+      "show-microphone": false,
+      "show-output-device": false,
+      "show-input-device": false,
+      "expandable": false,
+      "volume-step": 2,
+      "max-volume": 150
     }
   }
 }

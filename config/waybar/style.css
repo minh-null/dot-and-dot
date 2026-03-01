@@ -23,7 +23,7 @@ window#waybar.hidden {
 #temperature,
 #idle_inhibitor,
 #pulseaudio,
-#pulseaudio-slider,
+/*#pulseaudio-slider,*/
 #network,
 #custom-orbit,
 #custom-notification {
@@ -157,13 +157,13 @@ box-shadow: 0 0 10px rgba(180,160,255,0.45);
   background: linear-gradient(135deg, #B395F9, #A399F9);
 }
 
-#pulseaudio-slider {
+/*#pulseaudio-slider {
   color: #b8c0ff;
   background: linear-gradient(135deg, #A399F9, #999BF8);
   min-width: 50px;
 }
 
-#pulseaudio-slider slider {}
+#pulseaudio-slider slider {}*/
 
 #network {
   background: linear-gradient(135deg, #999BF8, #919DF8);

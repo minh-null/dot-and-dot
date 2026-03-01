@@ -21,7 +21,7 @@
   "modules-right": [
     "wlr/taskbar",
     "idle_inhibitor",
-    "pulseaudio/slider",
+    /*"pulseaudio/slider",*/
     "pulseaudio",
     "network",
     "custom/orbit",
@@ -73,7 +73,7 @@
       "active": ""
     },
     "persistent-workspaces": {
-      "*": 2
+      "*": 3
     },
     "disable-scroll": true,
     "all-outputs": true,
@@ -98,11 +98,11 @@
       "deactivated": ""
     }
   },
-  "pulseaudio/slider": {
+/*  "pulseaudio/slider": {
     "format": "{volume}%",
     "format-muted": " MUTE",
     "step": 5,
-  },
+  },*/
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-muted": " {format_source}",

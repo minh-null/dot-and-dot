@@ -1,24 +1,36 @@
 :root {
   --border-radius: 22px;
-  --cc-bg: transparent;
-
-  --widget-background: rgba(46, 46, 46, 0.7);
-  --noti-bg-alpha: 0.6;
-
   --padding: calc(var(--border-radius) / 2);
+
+  /* Glass background */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
 }
 
 .control-center {
+  background: transparent;
   border-radius: 0;
 }
 
-.widgets > .widget,
+/* Apply glass ONLY to widgets that are NOT mpris */
+.widgets > .widget-volume,
+.widgets > .widget-title,
+.widgets > .widget-inhibitors,
+.widgets > .widget-dnd,
+.widgets > .widget-notifications {
+  background: var(--glass-bg);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  border: 1px solid var(--glass-border);
+}
+
+/* Keep glass for mpris buttons/dots only */
 .widget-mpris > carouselindicatordots,
 .widget-mpris > box > button {
-  background: var(--widget-background);
+  background: var(--glass-bg);
   border-radius: var(--border-radius);
-  padding: calc(var(--border-radius) / 2);
-  border: var(--border);
+  padding: var(--padding);
+  border: 1px solid var(--glass-border);
 }
 
 .control-center-list-placeholder {
@@ -30,28 +42,91 @@
   padding: 8px;
 }
 
-.widget.widget-mpris {
+
+/* Remove ALL container backgrounds */
+.widgets > .widget.widget-mpris {
   background: transparent;
-  border-radius: 0;
-  padding: 0;
   border: none;
+  padding: 0;
 }
+
+.widget-mpris,
+.widget-mpris > box,
+.widget-mpris revealer,
+.widget-mpris revealer > box {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Player container */
+.widget-mpris-player {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0 var(--padding);
+}
+
+.widget-mpris-player:only-child {
+  margin: 0;
+}
+
+/* Dots styling */
 .widget.widget-mpris > carouselindicatordots {
   --dots-padding: 4px;
   padding: var(--dots-padding);
-  padding-left: var(--dots-padding);
   padding-right: calc(6px + var(--dots-padding));
-  margin: 0;
   margin-top: var(--padding);
 }
+
+/* Button hover */
 .widget-mpris > box > button:hover {
-  background: rgba(46, 46, 46, 1);
+  background: rgba(255, 255, 255, 0.15);
 }
-.widget-mpris-player {
-  box-shadow: none;
-  border: var(--border);
-  margin: 0 var(--padding);
+
+
+.widget-pulseaudio box {
+  margin: 4px 0;
 }
-.widget-mpris-player:only-child {
-  margin: 0;
+
+.widget-pulseaudio scale {
+  margin: 6px 0;
+}
+
+/* Slider track */
+.widget-pulseaudio trough {
+  min-height: 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Filled portion */
+.widget-pulseaudio highlight {
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Slider handle */
+.widget-pulseaudio slider {
+  min-height: 14px;
+  min-width: 14px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Buttons */
+.widget-pulseaudio button {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.widget-pulseaudio button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Per-application blocks */
+.widget-pulseaudio .application {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 6px;
 }
