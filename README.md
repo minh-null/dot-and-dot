@@ -69,7 +69,107 @@
 [![Hyprland Rice Demo](https://img.youtube.com/vi/PLaNDeCnt1Q/maxresdefault.jpg)](https://youtu.be/PLaNDeCnt1Q)
 ## File structure
 ```
-
+marchyso
+├── assets
+│   ├── lock.jpg
+│   ├── login1.jpg
+│   ├── login.jpg
+│   ├── rice0.jpg
+│   ├── rice1.jpg
+│   ├── rice2.jpg
+│   └── rice.jpg
+├── config
+│   ├── cava
+│   │   ├── config
+│   │   ├── shaders
+│   │   │   ├── bar_spectrum.frag
+│   │   │   ├── eye_of_phi.frag
+│   │   │   ├── northern_lights.frag
+│   │   │   ├── pass_through.vert
+│   │   │   ├── spectrogram.frag
+│   │   │   └── winamp_line_style_spectrum.frag
+│   │   └── themes
+│   │       ├── solarized_dark
+│   │       └── tricolor
+│   ├── eww
+│   │   ├── eww.scss
+│   │   └── eww.yuck
+│   ├── fastfetch
+│   │   ├── config.json
+│   │   └── config.jsonc
+│   ├── hyfetch.json
+│   ├── hypr
+│   │   ├── avatar.png
+│   │   ├── Fonts
+│   │   │   ├── JetBrains
+│   │   │   │   └── JetBrains Mono Nerd.ttf
+│   │   │   └── SF Pro Display
+│   │   │       ├── SF Pro Display Bold.otf
+│   │   │       └── SF Pro Display Regular.otf
+│   │   ├── hyprland.conf
+│   │   ├── hyprlock.conf
+│   │   ├── hyprlock.png
+│   │   ├── hyprpaper.conf
+│   │   ├── hyprsettings.toml
+│   │   ├── monitors.conf
+│   │   └── Scripts
+│   │       └── songdetail.sh
+│   ├── hyprwave
+│   │   ├── config.conf
+│   │   └── style.css
+│   ├── kitty
+│   │   └── kitty.conf
+│   ├── minh_lol_custom_design.omp.json
+│   ├── quickshell
+│   │   ├── ActivateLinux.qml
+│   │   └── active
+│   │       └── shell.qml
+│   ├── swaync
+│   │   ├── config.json
+│   │   ├── scripts
+│   │   │   ├── brightness.sh
+│   │   │   └── volume
+│   │   └── style.css
+│   ├── waybar
+│   │   ├── config.jsonc
+│   │   └── style.css
+│   └── wofi
+│       ├── config
+│       ├── style.css
+│       └── style-keybinds.css
+├── install.sh
+├── local-bin
+│   ├── emoji-picker
+│   ├── marchyso_logo.txt
+│   ├── marchyso.txt
+│   ├── oh-my-posh
+│   ├── screensaver
+│   ├── screensaver-bounce
+│   ├── wofi-keybinds
+│   ├── wofi-launcher
+│   └── wofi-power
+├── pixie-sddm
+│   ├── assets
+│   │   ├── avatar.jpg
+│   │   ├── background.jpg
+│   │   └── fonts
+│   │       ├── FlexRounded-B.ttf
+│   │       ├── FlexRounded-M.ttf
+│   │       └── FlexRounded-R.ttf
+│   ├── components
+│   │   ├── Clock.qml
+│   │   └── PowerBar.qml
+│   ├── install.sh
+│   ├── LICENSE
+│   ├── Main.qml
+│   ├── metadata.desktop
+│   └── theme.conf
+├── README.md
+└── wallpapers
+    ├── 6418406.jpg
+    ├── macos-monterey-wwdc-21-stock-dark-mode-5k-3840x2160-5585.jpg
+    ├── purple.jpeg
+    └── win11-violet.jpg
 ```
 
 ## Link to the animated thing
