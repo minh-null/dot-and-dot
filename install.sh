@@ -9,7 +9,7 @@ BACKUP_DIR="$HOME_DIR/backup_$(date +%Y%m%d_%H%M%S)"
 CONFIG_DIRS=(cava hypr waybar fastfetch wofi)
 
 PACKAGES=(
-  nodejs npm electron
+  nodejs npm electron awww
   hyprland cava waybar wofi cliphist wl-clipboard fastfetch hyprpaper
   rofi-emoji papirus-icon-theme archlinux-xdg-menu zsh orbit-wifi
   qt6-declarative qt6-svg qt6-quickcontrols2
