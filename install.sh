@@ -9,7 +9,7 @@ BACKUP_DIR="$HOME_DIR/backup_$(date +%Y%m%d_%H%M%S)"
 CONFIG_DIRS=(cava hypr waybar fastfetch wofi)
 
 PACKAGES=(
-  nodejs npm electron awww
+  nodejs npm electron awww bat
   hyprland cava waybar wofi cliphist wl-clipboard fastfetch hyprpaper
   rofi-emoji papirus-icon-theme archlinux-xdg-menu zsh orbit-wifi
   qt6-declarative qt6-svg qt6-quickcontrols2
@@ -51,12 +51,7 @@ cp -r "$SCRIPT_DIR/wallpapers/"* "$HOME_DIR/Pictures/Wallpapers/" 2>/dev/null ||
 
 mkdir -p "$HOME_DIR/.local/bin"
 cp -r "$SCRIPT_DIR/local-bin/"* "$HOME_DIR/.local/bin/" 2>/dev/null || true
-chmod +x $HOME_DIR/.local/bin/emoji-picker
-chmod +x $HOME_DIR/.local/bin/screensaver
-chmod +x $HOME_DIR/.local/bin/screensaver-bounce
-chmod +x $HOME_DIR/.local/bin/wofi-keybinds
-chmod +x $HOME_DIR/.local/bin/wofi-launcher
-chmod +x $HOME_DIR/.local/bin/wofi-power
+chmod +x $HOME_DIR/.local/bin/*
 
 install -m 644 "$SCRIPT_DIR/.zshrc" "$HOME_DIR/.zshrc"
 

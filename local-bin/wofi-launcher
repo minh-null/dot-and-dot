@@ -8,6 +8,10 @@ emoji() {
   rofimoji --selector wofi --clipboard wl-copy --action copy
 }
 
+wallpapers() {
+  wofi-wallpaper-switcher
+}
+
 help_menu() {
   wofi-keybinds
 }
@@ -16,6 +20,7 @@ help_menu() {
 menu_entries=(
   "📦 Applications|applications"
   "😀 Emoji|emoji"
+  "🖼️ Themes|wallpapers"
   "⚙️ Help|help_menu"
   "⏻ Power|wofi-power"
 )
@@ -26,9 +31,8 @@ labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
 choice=$(printf "%s\n" "$labels" | \
   wofi --dmenu \
      --prompt "Menu, search something" \
-     --location top_left \
      --width 300 \
-     --height 275)
+     --height 325)
 
 # Execute matching function
 for entry in "${menu_entries[@]}"; do

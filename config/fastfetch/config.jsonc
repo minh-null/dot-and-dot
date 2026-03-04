@@ -6,10 +6,10 @@
     "percent": { "type": 0 }
   },
   "logo": {
-    "type": "kitty",
-    "source": "/home/minh_lol/Downloads/marchyso.png",
-    "width": 30,
-    "padding": { "left": 0, "right": 10 }
+    "type": "auto",
+    "source": "arch",
+    "width": 8,
+    "padding": { "left": 0, "right": 2 }
   },
   "modules": [
     {
@@ -87,7 +87,7 @@
     },
     {
       "type": "custom",
-      "format": "\n"
+      "format": ""
     },
     {
       "type": "colors",
