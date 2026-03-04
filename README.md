@@ -95,7 +95,6 @@ marchyso
 │   │   ├── eww.scss
 │   │   └── eww.yuck
 │   ├── fastfetch
-│   │   ├── config.json
 │   │   └── config.jsonc
 │   ├── hyfetch.json
 │   ├── hypr
@@ -147,7 +146,9 @@ marchyso
 │   ├── screensaver-bounce
 │   ├── wofi-keybinds
 │   ├── wofi-launcher
-│   └── wofi-power
+│   ├── wofi-power
+│   ├── wofi-power-center
+│   └── wofi-wallpaper-switcher
 ├── pixie-sddm
 │   ├── assets
 │   │   ├── avatar.jpg
@@ -170,6 +171,7 @@ marchyso
     ├── macos-monterey-wwdc-21-stock-dark-mode-5k-3840x2160-5585.jpg
     ├── purple.jpeg
     └── win11-violet.jpg
+
 ```
 
 ## Link to the animated thing
