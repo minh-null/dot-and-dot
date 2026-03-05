@@ -9,22 +9,32 @@ BACKUP_DIR="$HOME_DIR/backup_$(date +%Y%m%d_%H%M%S)"
 CONFIG_DIRS=(cava hypr waybar fastfetch wofi)
 
 PACKAGES=(
-  nodejs npm electron awww bat
-  hyprland cava waybar wofi cliphist wl-clipboard fastfetch hyprpaper
-  rofi-emoji papirus-icon-theme archlinux-xdg-menu zsh orbit-wifi
-  qt6-declarative qt6-svg qt6-quickcontrols2
-  qt5-graphicaleffects qt5-quickcontrols2
+  nodejs npm electron bat
+  hyprland cava waybar wofi cliphist wl-clipboard fastfetch hyprpaper ttf-jetbrains-mono-nerd
+  papirus-icon-theme archlinux-xdg-menu zsh xdg-desktop-portal-hyprland bluez bluez-utils
+  qt6-declarative qt6-svg qt6-quickcontrols2 grim swappy mako dolphin kate 
+  qt5-graphicaleffects qt5-quickcontrols2 xdg-user-dirs
+)
+
+AUR_PACKAGES=(
+  orbit-wifi rofi-emoji awww-bin swaync-git
 )
 
 echo "Updating system..."
-sudo pacman -Syu --needed
+sudo pacman -Syu
 
-if command -v yay &>/dev/null; then
-  yay -Syu --needed
+if ! command -v yay &>/dev/null; then
+  echo "Installing yay..."
+  sudo pacman -S --needed git base-devel
+  git clone https://aur.archlinux.org/yay.git /tmp/yay
+  cd /tmp/yay
+  makepkg -si --noconfirm
+  cd -
 fi
 
 echo "Installing packages..."
 sudo pacman -S --needed "${PACKAGES[@]}"
+yay -S --needed "${AUR_PACKAGES[@]}"
 
 XDG_MENU_PREFIX=arch- kbuildsycoca6 || true
 
@@ -51,7 +61,7 @@ cp -r "$SCRIPT_DIR/wallpapers/"* "$HOME_DIR/Pictures/Wallpapers/" 2>/dev/null ||
 
 mkdir -p "$HOME_DIR/.local/bin"
 cp -r "$SCRIPT_DIR/local-bin/"* "$HOME_DIR/.local/bin/" 2>/dev/null || true
-chmod +x $HOME_DIR/.local/bin/*
+chmod +x "$HOME_DIR/.local/bin/"* 2>/dev/null || true
 
 install -m 644 "$SCRIPT_DIR/.zshrc" "$HOME_DIR/.zshrc"
 
