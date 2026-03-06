@@ -2,6 +2,8 @@
 
 menu_entries=(
   "SUPER              │           Open Menu"
+  "SUPER + Esc        │           Power Options"
+  "ALT + K            │           Cheatsheet"
   "SUPER + Q          │           Open Terminal"
   "SUPER + E          │           Open Dolphin"
   "SUPER + B          │           Open Browser (Firefox)"
@@ -29,6 +31,12 @@ menu_entries=(
   "SUPER + ↓          │           Move Focus Down"
   "SUPER + LMB Drag   │           Move Window"
   "SUPER + RMB Drag   │           Resize Window"
+  "SUPER + H          │           Move Window Left"
+  "SUPER + L          │           Move Window Right"
+  "SUPER + K          │           Move Window Up"
+  "SUPER + J          │           Move Window Down"
+  "SUPER + LMB Drag   │           Move Window"
+  "SUPER + RMB Drag   │           Resize Window"
 
   "SUPER + 1          │           Switch to Workspace 1"
   "SUPER + 2          │           Switch to Workspace 2"
@@ -54,14 +62,14 @@ menu_entries=(
   "Media Previous     │           Previous Track"
 )
 
-# Extract labels for display
-labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
-
 choice=$(printf "%s\n" "${menu_entries[@]}" | \
+  sed 's/│/\t/' | \
   wofi --dmenu \
+       --hide-scroll \
        --class wofi-keybinds \
+       --columns 2 \
        --width 600 \
        --height 480 \
-       --prompt "Need some help? Here are some keybinds, SUPER is the Windows key")
+       --prompt "SUPER is the Windows key and H, J, K, L is left down up right")
 
-
+exit 0

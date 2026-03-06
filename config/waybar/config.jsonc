@@ -21,16 +21,16 @@
   "modules-right": [
     "wlr/taskbar",
     "idle_inhibitor",
-    /*"pulseaudio/slider",*/
     "pulseaudio",
     "network",
+    /*"custom/inputmethod",*/
     "custom/orbit",
     "custom/notification",
   ],
   /* === Modules Left === */
   "custom/archicon": {
     "format": "",
-    "on-click": "wofi-launcher",
+    "on-click": "wofi-power",
     "tooltip": true,
     "tooltip-format": "Arch BTW",
   },
@@ -98,11 +98,6 @@
       "deactivated": ""
     }
   },
-/*  "pulseaudio/slider": {
-    "format": "{volume}%",
-    "format-muted": " MUTE",
-    "step": 5,
-  },*/
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-muted": " {format_source}",
@@ -118,7 +113,7 @@
     "format-ethernet": "{ifname} 󰈀",
     "format-disconnected": " ",
     "tooltip-format": " {ifname} via {gwaddr}",
-    "tooltip-format-ethernet": " {ifname} {ipaddr}/{cidr}",
+    "tooltip-format-ethernet": " {ifname}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
   },
@@ -129,6 +124,11 @@
     "on-click": "orbit toggle top-right",
     "format": " "
   },
+/*  "custom/inputmethod": {
+    "exec": "~/.config/waybar/scripts/im-status.sh",
+    "on-click":"fcitx5 -d && fcitx5-remote -t",
+    "interval": 10
+  },*/
   "custom/notification": {
     "tooltip": true,
     "format": "<span size='20pt'>{icon}</span>",

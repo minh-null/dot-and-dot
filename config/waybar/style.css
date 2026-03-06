@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-  background: rgba(34, 36, 54, 0.6);
+  background: rgba(198, 203, 245, 0.1);
 }
 
 window#waybar.hidden {
@@ -23,8 +23,8 @@ window#waybar.hidden {
 #temperature,
 #idle_inhibitor,
 #pulseaudio,
-/*#pulseaudio-slider,*/
 #network,
+/*#custom-inputmethod,*/
 #custom-orbit,
 #custom-notification {
   color: #161320;
@@ -157,14 +157,6 @@ box-shadow: 0 0 10px rgba(180,160,255,0.45);
   background: linear-gradient(135deg, #B395F9, #A399F9);
 }
 
-/*#pulseaudio-slider {
-  color: #b8c0ff;
-  background: linear-gradient(135deg, #A399F9, #999BF8);
-  min-width: 50px;
-}
-
-#pulseaudio-slider slider {}*/
-
 #network {
   background: linear-gradient(135deg, #999BF8, #919DF8);
   padding-right: 13px;
@@ -179,6 +171,12 @@ box-shadow: 0 0 10px rgba(180,160,255,0.45);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/*#custom-inputmethod {
+  background: linear-gradient(135deg, #919DF8, #7aa2f7);
+  font-size: 15px;
+  color: #0f0f14;
+}*/
 
 #custom-notification {
   font-family: "NotoSansMono Nerd Font";
