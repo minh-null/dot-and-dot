@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+Purple() {
+  awww img ~/Pictures/Wallpapers/purple.jpeg --transition-fps 60 --transition-step 255 --transition-type any
+}
+
+MacOS() {
+  awww img ~/Pictures/Wallpapers/macos-monterey-wwdc-21-stock-dark-mode-5k-3840x2160-5585.jpg --transition-fps 60 --transition-step 255 --transition-type any
+}
+
+Abstract_Circle() {
+  awww img ~/Pictures/Wallpapers/6418406.jpg --transition-fps 60 --transition-step 255 --transition-type any
+}
+
+Violet_11() {
+  awww img ~/Pictures/Wallpapers/win11-violet.jpg --transition-fps 60 --transition-step 255 --transition-type any
+}
+
+# Ordered entries: "Label|function"
+menu_entries=(
+  "Purple|Purple"
+  "Monterey|MacOS"
+  "Abstract Violet Circle|Abstract_Circle"
+  "Violet 11|Violet_11"
+)
+
+# Extract labels for display
+labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
+
+choice=$(printf "%s\n" "$labels" | \
+  wofi --dmenu \
+     --prompt "Menu, search something" \
+     --width 300 \
+     --height 275)
+
+# Execute matching function
+for entry in "${menu_entries[@]}"; do
+  label="${entry%%|*}"
+  action="${entry##*|}"
+  [[ "$choice" == "$label" ]] && "$action"
+done

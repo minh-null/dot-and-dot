@@ -115,6 +115,9 @@ alias dinosay="cowsay -f stegosaurus"
 alias cowsay='cowsay -f $(ls /usr/share/cowsay/cows | shuf -n1 | sed s/.cow//)'
 alias moztestka="Moztestka"
 alias clean_up="sudo pacman -Scc && yay -Scc && flatpak remove --unused"
+alias unicode="kitty +kitten unicode_input"
+alias pretty="bat -l conf -p"
+alias whoareyou="cat /etc/hostname"
 
 # Created by `pipx` on 2026-01-09 14:53:40
 export PATH="$PATH:/home/"$username"/.local/bin"

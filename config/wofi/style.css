@@ -47,16 +47,4 @@ color: black;
 margin-right: 12px;
 }
 
-/* Center text only for wofi-keybinds
-window.wofi-keybinds #entry {
-    justify-content: center;
-}
 
-window.wofi-keybinds #entry box {
-    justify-content: center;
-}
-
-window.wofi-keybinds #text {
-    text-align: center;
-}
-*/

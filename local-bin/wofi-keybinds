@@ -1,29 +1,43 @@
 #!/usr/bin/env bash
 
 menu_entries=(
+  "SUPER              │           Open Menu"
+  "SUPER + Esc        │           Power Options"
+  "ALT + K            │           Cheatsheet"
   "SUPER + Q          │           Open Terminal"
-  "SUPER + C          │           Close Window"
-  "SUPER + M          │           Exit Hyprland"
   "SUPER + E          │           Open Dolphin"
-  "ALT + E            │           Open EZ-FM"
-  "SUPER + ALT + F    │           Toggle Floating"
-  "SUPER + R          │           App Launcher"
-  "SUPER + P          │           Toggle Pseudo (Dwindle)"
-  "SUPER + J          │           Toggle Split (Dwindle)"
-  "SUPER + V          │           Clipboard History"
-  "PRINT              │           Screenshot Selection"
-  "SUPER + F          │           Toggle Fullscreen"
   "SUPER + B          │           Open Browser (Firefox)"
   "SUPER + T          │           Open Text Editor (Kate)"
+  "ALT + C            │           VS Codium"
+  "ALT + E            │           Open EZ-FM"
+  "SUPER + R          │           App Launcher"
+  "SUPER + V          │           Clipboard History"
   "SUPER + SHIFT + .  │           Emoji Picker - GUI"
   "SUPER + .          │           Emoji Picker - Wofi"
-  "SUPER + SPACE      │           Open App Menu"
-  "SUPER + ESC        │           Power Menu"
+  "PRINT              │           Screenshot Selection"
+
+  "SUPER + C          │           Close Window"
+  "SUPER + F          │           Toggle Fullscreen"
+  "SUPER + ALT + F    │           Toggle Floating"
+  "SUPER + P          │           Toggle Pseudo (Dwindle)"
+  "SUPER + J          │           Toggle Split (Dwindle)"
   "SUPER + L          │           Lock Screen"
+  "SUPER + ESC        │           Power Menu"
+  "SUPER + M          │           Exit Hyprland"
+
   "SUPER + ←          │           Move Focus Left"
   "SUPER + →          │           Move Focus Right"
   "SUPER + ↑          │           Move Focus Up"
   "SUPER + ↓          │           Move Focus Down"
+  "SUPER + LMB Drag   │           Move Window"
+  "SUPER + RMB Drag   │           Resize Window"
+  "SUPER + H          │           Move Window Left"
+  "SUPER + L          │           Move Window Right"
+  "SUPER + K          │           Move Window Up"
+  "SUPER + J          │           Move Window Down"
+  "SUPER + LMB Drag   │           Move Window"
+  "SUPER + RMB Drag   │           Resize Window"
+
   "SUPER + 1          │           Switch to Workspace 1"
   "SUPER + 2          │           Switch to Workspace 2"
   "SUPER + N          │           Switch to Workspace N"
@@ -34,11 +48,9 @@ menu_entries=(
   "SUPER + SHIFT + 0  │           Move Window to Workspace 10"
   "SUPER + S          │           Toggle Special Workspace"
   "SUPER + SHIFT + S  │           Move Window to Special Workspace"
-  "ALT + C            │           VS Codium"
   "SUPER + Scroll ↓   │           Next Workspace"
   "SUPER + Scroll ↑   │           Previous Workspace"
-  "SUPER + LMB Drag   │           Move Window"
-  "SUPER + RMB Drag   │           Resize Window"
+
   "Volume Up Key      │           Increase Volume"
   "Volume Down Key    │           Decrease Volume"
   "Mute Key           │           Toggle Output Mute"
@@ -50,14 +62,14 @@ menu_entries=(
   "Media Previous     │           Previous Track"
 )
 
-# Extract labels for display
-labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
-
 choice=$(printf "%s\n" "${menu_entries[@]}" | \
+  sed 's/│/\t/' | \
   wofi --dmenu \
+       --hide-scroll \
        --class wofi-keybinds \
+       --columns 2 \
        --width 600 \
        --height 480 \
-       --prompt "Need some help? Here are some keybinds, SUPER is the Windows key")
+       --prompt "SUPER is the Windows key and H, J, K, L is left down up right")
 
-
+exit 0
