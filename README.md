@@ -7,7 +7,7 @@
   <summary><strong>Installation</strong></summary>
 
   - Run `git clone --depth=1 https://github.com/minh-null/dot-and-dot.git`
-    - Then go into this repo using `cd dot-and-dot` and run `./setup install`
+    - Then go into this repo using `cd marchyso` and run `./setup install`
     - Turn `install.sh` into an executable using `chmod +x install.sh`
     - Run the script `./install.sh`
 
