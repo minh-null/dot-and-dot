@@ -62,9 +62,7 @@
 ![](/assets/login.jpg)
 ![](/assets/login1.jpg)
 ![](/assets/lock.jpg)
-![](/assets/rice0.jpg)
 ![](/assets/rice.jpg)
-![](/assets/rice1.jpg)
 ![](/assets/rice2.jpg)
 ## File structure
 ```
@@ -73,8 +71,6 @@ marchyso
 │   ├── lock.jpg
 │   ├── login1.jpg
 │   ├── login.jpg
-│   ├── rice0.jpg
-│   ├── rice1.jpg
 │   ├── rice2.jpg
 │   └── rice.jpg
 ├── config
@@ -94,6 +90,8 @@ marchyso
 │   │   ├── eww.scss
 │   │   └── eww.yuck
 │   ├── fastfetch
+│   │   ├── archlogo.txt
+│   │   ├── arch.txt
 │   │   └── config.jsonc
 │   ├── hyfetch.json
 │   ├── hypr
@@ -104,6 +102,7 @@ marchyso
 │   │   │   └── SF Pro Display
 │   │   │       ├── SF Pro Display Bold.otf
 │   │   │       └── SF Pro Display Regular.otf
+│   │   ├── hypridle.conf
 │   │   ├── hyprland.conf
 │   │   ├── hyprlock.conf
 │   │   ├── hyprlock.png
@@ -111,7 +110,10 @@ marchyso
 │   │   ├── hyprsettings.toml
 │   │   ├── monitors.conf
 │   │   └── Scripts
-│   │       └── songdetail.sh
+│   │       ├── songdetail.sh
+│   │       ├── weather
+│   │       │   └── weathertext
+│   │       └── weather.sh
 │   ├── hyprwave
 │   │   ├── config.conf
 │   │   └── style.css
@@ -130,6 +132,8 @@ marchyso
 │   │   └── style.css
 │   ├── waybar
 │   │   ├── config.jsonc
+│   │   ├── scripts
+│   │   │   └── im-status.sh
 │   │   └── style.css
 │   └── wofi
 │       ├── config
@@ -141,7 +145,7 @@ marchyso
 │   ├── marchyso_logo.txt
 │   ├── marchyso.txt
 │   ├── oh-my-posh
-│   ├── screensaver
+│   ├── python3.13
 │   ├── screensaver-bounce
 │   ├── wofi-keybinds
 │   ├── wofi-launcher
@@ -170,6 +174,8 @@ marchyso
     ├── macos-monterey-wwdc-21-stock-dark-mode-5k-3840x2160-5585.jpg
     ├── purple.jpeg
     └── win11-violet.jpg
+
+
 
 ```
 
