@@ -174,9 +174,6 @@ marchyso
     ├── macos-monterey-wwdc-21-stock-dark-mode-5k-3840x2160-5585.jpg
     ├── purple.jpeg
     └── win11-violet.jpg
-
-
-
 ```
 
 ## Link to the animated thing
