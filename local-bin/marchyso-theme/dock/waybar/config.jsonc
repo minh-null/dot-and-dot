@@ -1,0 +1,75 @@
+{
+  "layer": "top",
+  "position": "top",
+  "autohide": true,
+  "autohide-blocked": false,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  /* === Modules Order === */
+  "modules-left": [
+  ],
+  "modules-center": [
+    "custom/archicon",
+    "clock",
+    "hyprland/workspaces",
+    "custom/orbit",
+    "custom/notification",
+  ],
+  /* === Modules Center === */
+  "custom/archicon": {
+    "format": "",
+    "on-click": "wofi-power-center",
+    "tooltip": true,
+    "tooltip-format": "Arch BTW",
+  },
+  "clock": {
+    "timezone": "Vietnam/Hanoi_City",
+    "format": "{:%H:%M %d, %m}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month"
+    }
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "active": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "disable-scroll": true,
+    "all-outputs": true,
+    "show-special": true
+  },
+  "custom/orbit": {
+    "exec": "orbit waybar-status",
+    "return-type": "json",
+    "interval": 10,
+    "on-click": "orbit toggle top-right",
+    "format": " "
+  },
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='20pt'>{icon}</span>",
+    "format": "{icon} {0}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+}

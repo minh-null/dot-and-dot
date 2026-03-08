@@ -1,0 +1,100 @@
+@import "colors.css";
+
+/* -- Global rules -- */
+* {
+  border: none;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0;
+}
+
+/* - Genera rules for visible modules -- */
+#custom-archicon,
+#clock,
+#temperature,
+#idle_inhibitor,
+#custom-orbit,
+#custom-notification {
+  color: #161320;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+}
+/* -- Specific styles -- */
+
+/* Modules left */
+#custom-archicon {
+  font-size: 20px;
+  color: @blue;
+  background: @bg0;
+  padding-right: 17px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#clock {
+background: @bg0;
+color: @red;
+}
+
+/* Modules center */
+#workspaces {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background: @bg0;
+}
+
+#workspaces button {
+  color: @grey2;
+  background: transparent;
+  padding: 4px 5px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: @green;
+}
+
+#workspaces button.active {
+  color: @purple;
+  text-shadow: 0 0 4px #ABE9B3;
+}
+
+#workspaces button:hover {
+  color: @blue;
+}
+
+#workspaces button.active:hover {}
+
+#custom-orbit {
+  background: @bg0;
+  font-size: 15px;
+  color: @orange;
+}
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+  font-size: 20px;
+  color: @green;
+  background: @bg0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* === Optional animation === */
+@keyframes blink {
+  to {
+    background-color: #BF616A;
+    color: #B5E8E0;
+  }
+}

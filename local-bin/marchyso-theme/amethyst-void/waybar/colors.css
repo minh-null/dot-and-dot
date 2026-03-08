@@ -1,0 +1,33 @@
+@define-color black #161320;
+@define-color blue   #89B4FA;
+@define-color cyan   #B5E8E0;
+@define-color green-neon #A6E3A1;
+
+@define-color bg0 rgba(198, 203, 245, 0.1);
+@define-color bg1 #161320;
+@define-color bg2 rgba(0, 0, 0, 0.5);
+@define-color bg3 rgba(34, 36, 54, 0.5);
+@define-color fg #cad3f5;
+@define-color overlay #7f849c;
+
+@define-color text #0f0f14;
+@define-color shadow rgba(180,160,255,0.45);
+@define-color background-color #BF616A;
+@define-color color #B5E8E0;
+@define-color shadow2 #ABE9B3;
+
+@define-color gradient0 #BD93F9;
+@define-color gradient1 #AC97F9;
+@define-color gradient2 #9B9BF8;
+@define-color gradient3 #899FF7;
+@define-color gradient4 #7aa2f7;
+
+@define-color workspaces-button @overlay;
+@define-color workspaces-button-occuipied @cyan;
+@define-color workspaces-button-active @blue;
+@define-color workspaces-button-hover @blue;
+@define-color custom-arch-sway @blue;
+
+
+
+
