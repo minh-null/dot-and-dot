@@ -62,6 +62,7 @@ cp -r "$SCRIPT_DIR/wallpapers/"* "$HOME_DIR/Pictures/Wallpapers/" 2>/dev/null ||
 mkdir -p "$HOME_DIR/.local/bin"
 cp -r "$SCRIPT_DIR/local-bin/"* "$HOME_DIR/.local/bin/" 2>/dev/null || true
 chmod +x "$HOME_DIR/.local/bin/"* 2>/dev/null || true
+cp -r "$SCRIPT_DIR/.local/"/marchyso-theme "$HOME_DIR/.local/bin/" 2>/dev/null || true
 
 install -m 644 "$SCRIPT_DIR/.zshrc" "$HOME_DIR/.zshrc"
 
