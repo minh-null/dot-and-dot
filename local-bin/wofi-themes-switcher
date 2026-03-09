@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+amethyst_void() {
+  rm ~/.local/marchyso-theme/backup/*
+  rm  ~/.config/waybar/*
+  cp -r ~/.local/marchyso-theme/amethyst-void/waybar/* ~/.config/waybar
+  waybar-start
+}
+
+Cherrywave() {
+  rm ~/.local/marchyso-theme/backup/*
+ rm  ~/.config/waybar/*
+  cp -r ~/.local/marchyso-theme/cherrywave/waybar/* ~/.config/waybar
+  waybar-start
+}
+
+Catppuchin() {
+  rm ~/.local/marchyso-theme/backup/*
+ rm  ~/.config/waybar/*
+  cp -r ~/.local/marchyso-theme/catppuchin-machiato/waybar/* ~/.config/waybar
+  waybar-start
+}
+
+Dock() {
+  rm ~/.local/marchyso-theme/backup/*
+ rm  ~/.config/waybar/*
+  cp -r ~/.local/marchyso-theme/dock/waybar/* ~/.config/waybar
+  waybar-start
+}
+
+# Ordered entries: "Label|function"
+menu_entries=(
+  "Amethys Void|amethyst_void"
+  "Cherrywave|Cherrywave"
+  "Catppuchin|Catppuchin"
+  "Dock|Dock"
+)
+
+# Extract labels for display
+labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
+
+choice=$(printf "%s\n" "$labels" | \
+  wofi --dmenu \
+     --prompt "Choose your theme" \
+     --width 300 \
+     --height 275)
+
+# Execute matching function
+for entry in "${menu_entries[@]}"; do
+  label="${entry%%|*}"
+  action="${entry##*|}"
+  [[ "$choice" == "$label" ]] && "$action"
+done

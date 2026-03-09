@@ -23,6 +23,7 @@
     "idle_inhibitor",
     "pulseaudio",
     "network",
+    /*"custom/inputmethod",*/
     "custom/orbit",
     "custom/notification",
   ],
@@ -123,6 +124,11 @@
     "on-click": "orbit toggle top-right",
     "format": " "
   },
+/*  "custom/inputmethod": {
+    "exec": "~/.config/waybar/scripts/im-status.sh",
+    "on-click":"fcitx5 -d && fcitx5-remote -t",
+    "interval": 10
+  },*/
   "custom/notification": {
     "tooltip": true,
     "format": "<span size='20pt'>{icon}</span>",
