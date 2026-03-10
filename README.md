@@ -176,8 +176,13 @@ marchyso
     └── win11-violet.jpg
 ```
 
-## Link to the animated thing
+## Credit
 ### ![Typing SVG](https://readme-typing-svg.demolab.com/demo/)
-## Have Fun ricing :3
+
+### ![Wallpaper Switcher](https://github.com/highonskooma/Wofi-Wallpaper-Picker.git)
+
+# :3
 
 MARCHYSO / **M**inh_null's **A****R****C**h Rice using **H**yprland, **Y**ummy, **S**illy and un**O**ptimised :3
+
+## Have Fun ricing :3

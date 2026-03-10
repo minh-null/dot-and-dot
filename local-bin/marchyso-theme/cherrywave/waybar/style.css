@@ -67,7 +67,7 @@ color: #0f0f14;
 }
 
 #cpu {
-background: linear-gradient(135deg, #C37AE1, #B196F9);
+background: linear-gradient(135deg, #DE006F, #D7218E);
 border-radius: 10px 0 0 10px;
 }
 
@@ -101,23 +101,23 @@ box-shadow: 0 0 10px rgba(180,160,255,0.45);
 }
 
 #workspaces button {
-  color: #B5E8E0;
+  color: #C37AE1;
   background: transparent;
   padding: 4px 4px;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #workspaces button.occupied {
-  color: #A6E3A1;
+  color: #C37AE1;
 }
 
 #workspaces button.active {
-  color: #89B4FA;
+  color: #DE006F;
   text-shadow: 0 0 4px #ABE9B3;
 }
 
 #workspaces button:hover {
-  color: #89B4FA;
+  color: #DE006F;
 }
 
 #workspaces button.active:hover {}
