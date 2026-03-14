@@ -1,0 +1,19 @@
+#!/bin/bash
+
+action=$(printf "Clipboard\nDelete item\nClear history" | wofi --dmenu --prompt "Cliphist")
+
+case "$action" in
+    "Clipboard")
+        cliphist list | wofi --dmenu --prompt "Copy" | cliphist decode | wl-copy
+        ;;
+
+    "Delete item")
+        item=$(cliphist list | wofi --dmenu --prompt "Delete")
+        [ -n "$item" ] && cliphist delete <<< "$item"
+        ;;
+
+    "Clear history")
+        cliphist wipe
+        notify-send "Cliphist" "Clipboard history cleared"
+        ;;
+esac

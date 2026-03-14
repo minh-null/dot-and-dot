@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
 applications() {
-  wofi --show drun --allow-images --show-icons --prompt "Search something . . ."
+  #wofi --show drun --allow-images --columns 2 --show-icons --prompt "Search something . . ."
+  wofi --show drun --allow-images --columns 2 --show-icons --prompt "Search something . . ." --width 850
 }
 
 emoji() {
   rofimoji --selector wofi --clipboard wl-copy --action copy
 }
 
-wallpapers() {
-  wofi-wallpaper-switcher
+styling() {
+  wofi-styling
 }
 
 help_menu() {
@@ -18,11 +19,11 @@ help_menu() {
 
 # Ordered entries: "Label|function"
 menu_entries=(
-  "📦 Applications|applications"
-  "😀 Emoji|emoji"
-  "🖼️ Themes|wallpapers"
-  "⚙️ Help|help_menu"
-  "⏻ Power|wofi-power"
+  "         Applications|applications"
+  "            Emoji|emoji"
+  "           Styling|styling"
+  "            Help|help_menu"
+  "      ⏻      Power|wofi-power-center"
 )
 
 # Extract labels for display
@@ -32,7 +33,8 @@ choice=$(printf "%s\n" "$labels" | \
   wofi --dmenu \
      --prompt "Menu, search something" \
      --width 300 \
-     --height 325)
+     --hide-scroll
+     --height 200)
 
 # Execute matching function
 for entry in "${menu_entries[@]}"; do

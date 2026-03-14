@@ -1,0 +1,6 @@
+#!/home/minh_lol/.local/share/pipx/venvs/binary-waterfall/bin/python
+import sys
+from binary_waterfall import run
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(run())

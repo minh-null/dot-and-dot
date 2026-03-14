@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+WALL="$1"
+
+# Start daemon if not running
+if ! pgrep -x "awww-daemon" > /dev/null; then
+    awww-daemon --format xrgb &
+    sleep 0.5
+fi
+
+DURATION="1"
+FPS="60"
+
+TRANSITIONS=(grow outer center wipe random)
+
+awww img "$WALL" \
+  --transition-type ${TRANSITIONS[$RANDOM % ${#TRANSITIONS[@]}]} \
+  --transition-duration 1 \
+  --transition-fps 60

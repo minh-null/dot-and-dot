@@ -3,29 +3,52 @@
 amethyst_void() {
   rm ~/.local/marchyso-theme/backup/*
   rm  ~/.config/waybar/*
+  rm  ~/.config/swaync/*
   cp -r ~/.local/marchyso-theme/amethyst-void/waybar/* ~/.config/waybar
+  cp -r ~/.local/marchyso-theme/amethyst-void/swaync/* ~/.config/swaync
+  awww img ~/Pictures/Wallpapers/purple.jpg --transition-fps 60 --transition-step 255 --transition-type any
+  sleep 1
   waybar-start
+  pkill swaync
+  swaync &
 }
 
 Cherrywave() {
   rm ~/.local/marchyso-theme/backup/*
- rm  ~/.config/waybar/*
+  rm  ~/.config/waybar/*
   cp -r ~/.local/marchyso-theme/cherrywave/waybar/* ~/.config/waybar
+  cp -r ~/.local/marchyso-theme/cherrywave/swaync/* ~/.config/swaync
+  awww img ~/Pictures/Wallpapers/cyberpunk-1920x1080-nnly8wng1ef964p9.jpg --transition-fps 60 --transition-step 255 --transition-type any
+  sleep 1
   waybar-start
+  pkill swaync
+  swaync &
 }
 
 Catppuchin() {
   rm ~/.local/marchyso-theme/backup/*
- rm  ~/.config/waybar/*
+  rm  ~/.config/waybar/*
+  rm  ~/.config/swaync/*
   cp -r ~/.local/marchyso-theme/catppuchin-machiato/waybar/* ~/.config/waybar
+  cp -r ~/.local/marchyso-theme/catppuchin-machiato/swaync/* ~/.config/swaync
+  awww img ~/Pictures/Wallpapers/a1c1250c87bedfe070682ded0f8019632a2bd489.jpg --transition-fps 60 --transition-step 255 --transition-type any
+  sleep 1
   waybar-start
+  pkill swaync
+  swaync &
 }
 
 Dock() {
   rm ~/.local/marchyso-theme/backup/*
- rm  ~/.config/waybar/*
+  rm  ~/.config/waybar/*
+  rm  ~/.config/swaync/*
   cp -r ~/.local/marchyso-theme/dock/waybar/* ~/.config/waybar
+  cp -r ~/.local/marchyso-theme/dock/swaync/* ~/.config/swaync
+  awww img ~/Pictures/Wallpapers/tank.jpg --transition-fps 60 --transition-step 255 --transition-type any
+  sleep 1
   waybar-start
+  pkill swaync
+  swaync &
 }
 
 # Ordered entries: "Label|function"

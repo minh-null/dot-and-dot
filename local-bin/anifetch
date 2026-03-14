@@ -1,0 +1,6 @@
+#!/home/minh_lol/.local/share/pipx/venvs/anifetch-cli/bin/python
+import sys
+from anifetch.__init__ import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())

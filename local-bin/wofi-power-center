@@ -3,7 +3,7 @@
 choice=$(printf "⏻ Shutdown\n↻ Reboot\n🗝 Lock\n⎋ Logout" | \
 wofi --dmenu \
      --prompt "Power Options" \
-     --width 300 \
+     --width 100 \
      --height 275)
 
 case "$choice" in

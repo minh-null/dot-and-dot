@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+wallpaper() {
+  wofi-wallpaper-switcher
+}
+
+theme() {
+  wofi-themes-switcher
+}
+
+# Ordered entries: "Label|function"
+menu_entries=(
+  "Wallpapers|wallpaper"
+  "Themes|theme"
+)
+
+# Extract labels for display
+labels=$(printf "%s\n" "${menu_entries[@]}" | cut -d'|' -f1)
+
+choice=$(printf "%s\n" "$labels" | \
+  wofi --dmenu \
+     --prompt "Styling . . ." \
+     --width 300 \
+     --height 275)
+
+# Execute matching function
+for entry in "${menu_entries[@]}"; do
+  label="${entry%%|*}"
+  action="${entry##*|}"
+  [[ "$choice" == "$label" ]] && "$action"
+done
