@@ -70,6 +70,11 @@
 
 ### ![Wallpaper Switcher](https://github.com/highonskooma/Wofi-Wallpaper-Picker.git)
 
+                        
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/minh-null/marchyso.svg?variant=adaptive)](https://starchart.cc/minh-null/marchyso)
+
+                    
 # :3
 
 MARCHYSO / **M**inh_null's **A****R****C**h Rice using **H**yprland, **Y**ummy, **S**illy and un**O**ptimised :3
