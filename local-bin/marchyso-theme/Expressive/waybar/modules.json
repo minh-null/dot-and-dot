@@ -1,0 +1,229 @@
+{
+  "group/extras": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 400,
+      "children-class": "extras",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/menu",
+      "wlr/taskbar"
+    ]
+  },
+  "group/audio": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 400,
+      "children-class": "audio",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+  "custom/cachy": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wofi-power",
+    "on-right-click": "kitty"
+  },
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "󰄰",
+      "active": "󰄯"
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%H
+%M}",
+    "format-alt": "{:%d
+%m
+%y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+},
+"mpris": {
+  "format": "<span size='14pt'>󰐎</span>",
+  "interval": 1,
+  "on-click": "playerctl play-pause",
+  "on-click-right": "playerctl next",
+  "on-click-middle": "playerctl previous",
+  "tooltip": true,
+  "tooltip-format": "{title}"
+},
+"custom/menu": {
+  "format": "<span size='16pt'>󰅃</span>",
+  "tooltip": false
+},
+"wlr/taskbar": {
+    "format": "{icon}",
+    "all-outputs": true,
+    "active-first": true,
+    "tooltip-format": "{name}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "rofi"
+    ]
+  },
+"privacy": {
+  "icon-size": 14,
+  "transition-duration": 250,
+  "modules": [
+    {
+      "type": "screenshare",
+      "tooltip": false,
+    }
+  ],
+  "ignore": [
+    {
+      "type": "screenshare",
+      "name": "obs"
+    }
+  ]
+},
+"network": {
+  "format-icons": {
+    "wifi": [
+      "<span size='12pt'>󰤯</span>",
+      "<span size='12pt'>󰤟</span>",
+      "<span size='12pt'>󰤢</span>",
+      "<span size='12pt'>󰤥</span>",
+      "<span size='12pt'>󰤨</span>"
+    ],
+    "ethernet": "<span size='12pt'>󰈀</span>",
+    "disabled": "<span size='12pt'>󰤭</span>",
+    "disconnected": "<span size='12pt'>󰤩</span>"
+  },
+  "format-wifi": "{icon}",
+  "format-ethernet": "{icon}",
+  "format-disconnected": "{icon}",
+  "format-disabled": "{icon}",
+  "interval": 5,
+  "tooltip-format": "{essid}\t{gwaddr}",
+  "on-click": "rfkill toggle wifi",
+  "on-click-right": "nm-connection-editor",
+  "tooltip": true,
+  "max-length": 20
+},
+"bluetooth": {
+  "interval": 5,
+  "format-on": "<span size='14pt'>󰂯</span>",
+  "format-off": "<span size='14pt'>󰂲</span>",
+  "format-disabled": "<span size='14pt'>󰂲</span>",
+  "format-connected": "<span size='14pt'>󰂱</span>",
+  "format-no-controller": "span size='14pt'>󰂯</span>",
+  "tooltip": true,
+  "tooltip-format": "{device_enumerate}",
+  "tooltip-format-enumerate-connected": "{device_address}",
+  "tooltip-format-enumerate-connected-battery": "{device_address} | Battery: {device_battery_percentage}%",
+  "on-click": "rfkill toggle bluetooth",
+  "on-click-right": "blueman-manager"
+},
+"pulseaudio#microphone": {
+  "format": "{format_source}",
+  "format-source": "<span size='14pt'>󰍬</span>",
+  "format-source-muted": "<span size='14pt'>󰍭</span>",
+  "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+  "on-click-right": "pavucontrol -t 4",
+  "tooltip": false
+},
+"pulseaudio/slider": {
+  "min": 0,
+  "max": 100,
+  "orientation": "vertical"
+},
+"pulseaudio": {
+  "interval": 1,
+  "format": "{icon}",
+  "format-icons": [
+    "<span size='14pt'>󰕿</span>",
+    "<span size='14pt'>󰖀</span>",
+    "<span size='14pt'>󰕾</span>"
+  ],
+  "format-muted": "<span size='14pt'>󰝟</span>",
+  "on-click-right": "pavucontrol -t 3",
+  "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  "reverse-scrolling": true,
+  "tooltip": true,
+  "tooltip-format": "Volume: {volume}%\n{desc}",
+  "ignored-sinks": [
+    "Easy Effects Sink"
+  ]
+},
+"backlight/slider": {
+  "min": 0,
+  "max": 100,
+  "orientation": "vertical",
+  "device": "intel_backlight"
+},
+"backlight": {
+  "device": "intel_backlight",
+  "format": "{icon}",
+  "format-icons": [
+    "󰃚",
+    "󰃛",
+    "󰃜",
+    "󰃝",
+    "󰃞",
+    "󰃟",
+    "󰃠"
+  ],
+  "reverse-scrolling": true,
+  "smooth-scrolling-threshold": 0.2,
+  "tooltip": false
+},
+"battery": {
+  "interval": 5,
+  "states": {
+    "critical": 10
+  },
+  "format": "{icon}",
+  "format-icons": [
+    "<span size='14pt'>󰁺</span>",
+    "<span size='14pt'>󰁻</span>",
+    "<span size='14pt'>󰁼</span>",
+    "<span size='14pt'>󰁽</span>",
+    "<span size='14pt'>󰁾</span>",
+    "<span size='14pt'>󰁿</span>",
+    "<span size='14pt'>󰂀</span>",
+    "<span size='14pt'>󰂁</span>",
+    "<span size='14pt'>󰂂</span>",
+    "<span size='14pt'>󰁹</span>"
+  ],
+  "format-charging": "<span size='14pt'>󰂄</span>",
+  "format-plugged": "<span size='14pt'>󰚥</span>",
+  "format-critical": "<span size='14pt'>󰂃</span>",
+  "tooltip": true,
+  "tooltip-format": "Charge: {capacity}%",
+  "tooltip-format-charging": "Charging: {capacity}%"
+},
+"custom/notification": {
+    "tooltip": true,
+    "format": "<span size='20pt'>{icon}</span>",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+}
