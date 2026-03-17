@@ -5,6 +5,10 @@ applications() {
   wofi --show drun --allow-images --columns 2 --show-icons --prompt "Search something . . ." --width 850
 }
 
+calc(){
+  rofi -show calc -modi calc -no-show-match -no-sort
+}
+
 emoji() {
   rofimoji --selector wofi --clipboard wl-copy --action copy
 }
@@ -20,6 +24,7 @@ help_menu() {
 # Ordered entries: "Label|function"
 menu_entries=(
   "         Applications|applications"
+  "      󱖦    Calculator|calc"
   "            Emoji|emoji"
   "           Styling|styling"
   "            Help|help_menu"

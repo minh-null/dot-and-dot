@@ -14,6 +14,7 @@ menu_entries=(
   "SUPER + SHIFT + .    Emoji Picker - GUI"
   "SUPER + .            Emoji Picker - Wofi"
   "PRINT                Screenshot Selection"
+  "SUPER + ALT + K      Calculator"
 
   "SUPER + C            Close Window"
   "SUPER + F            Toggle Fullscreen"
@@ -61,14 +62,14 @@ menu_entries=(
   "Media Previous       Previous Track"
 )
 
-choice=$(printf "%s\n" "${menu_entries[@]}" | \
-  sed 's/│/\t/' | \
+choice=$(printf "%s\n" "${menu_entries[@]}" |
+  sed 's/│/\t/' |
   wofi --dmenu \
-       --hide-scroll \
-       --class wofi-keybinds \
-       --columns 2 \
-       --width 875 \
-       --height 480 \
-       --prompt "                 SUPER is the Windows key and H, J, K, L is left down up right")
+    --hide-scroll \
+    --class wofi-keybinds \
+    --columns 2 \
+    --width 875 \
+    --height 480 \
+    --prompt "                 SUPER is the Windows key and H, J, K, L is left down up right")
 
 exit 0

@@ -18,7 +18,7 @@ Cherrywave() {
   rm  ~/.config/waybar/*
   cp -r ~/.local/marchyso-theme/cherrywave/waybar/* ~/.config/waybar
   cp -r ~/.local/marchyso-theme/cherrywave/swaync/* ~/.config/swaync
-  awww img ~/Pictures/Wallpapers/cyberpunk-1920x1080-nnly8wng1ef964p9.jpg --transition-fps 60 --transition-step 255 --transition-type any
+  awww img ~/Pictures/Wallpapers/cyberpunk.jpg --transition-fps 60 --transition-step 255 --transition-type any
   sleep 1
   waybar-start
   pkill swaync
@@ -31,7 +31,7 @@ Catppuchin() {
   rm  ~/.config/swaync/*
   cp -r ~/.local/marchyso-theme/catppuchin-machiato/waybar/* ~/.config/waybar
   cp -r ~/.local/marchyso-theme/catppuchin-machiato/swaync/* ~/.config/swaync
-  awww img ~/Pictures/Wallpapers/a1c1250c87bedfe070682ded0f8019632a2bd489.jpg --transition-fps 60 --transition-step 255 --transition-type any
+  awww img ~/Pictures/Wallpapers/catppuchin.jpg --transition-fps 60 --transition-step 255 --transition-type any
   sleep 1
   waybar-start
   pkill swaync
@@ -51,12 +51,29 @@ Dock() {
   swaync &
 }
 
+sidebar() {
+  rm ~/.local/marchyso-theme/backup/*
+  rm  ~/.config/waybar/*
+  rm  ~/.config/swaync/*
+  cp -r ~/.local/marchyso-theme/Expressive/waybar/* ~/.config/waybar
+  cp -r ~/.local/marchyso-theme/Expressive/swaync/* ~/.config/swaync
+  awww img ~/Pictures/Wallpapers/couple-bus-sunset.jpg --transition-fps 60 --transition-step 255 --transition-type any
+  sleep 1
+  waybar-start
+  pkill swaync
+  swaync &
+}
+
+
+
 # Ordered entries: "Label|function"
 menu_entries=(
   "Amethys Void|amethyst_void"
   "Cherrywave|Cherrywave"
   "Catppuchin|Catppuchin"
   "Dock|Dock"
+  "Gruvbox Dark"
+  "Expressive|sidebar"
 )
 
 # Extract labels for display
@@ -66,7 +83,7 @@ choice=$(printf "%s\n" "$labels" | \
   wofi --dmenu \
      --prompt "Choose your theme" \
      --width 300 \
-     --height 275)
+     --height 500)
 
 # Execute matching function
 for entry in "${menu_entries[@]}"; do
